@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.coderay.boot</groupId>
+        <artifactId>coderay-spring-boot</artifactId>
+        <version>${revision}</version>
+        <!-- <relativePath>../pom.xml</relativePath> -->
+    </parent>
+
+    <artifactId>coderay-spring-boot-dependencies</artifactId>
+    <packaging>pom</packaging>
+
+    <name>coderay-spring-boot-dependencies</name>
+    <description>CodeRay Spring Boot Dependencies</description>
+
+    <properties>
+        <nacos-spring-boot.version>0.2.12</nacos-spring-boot.version>
+        <dubbo.version>3.2.11</dubbo.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- nacos 配置中心 -->
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>nacos-config-spring-boot-starter</artifactId>
+                <version>${nacos-spring-boot.version}</version>
+            </dependency>
+
+            <!-- nacos 服务发现 -->
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>nacos-discovery-spring-boot-starter</artifactId>
+                <version>${nacos-spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
